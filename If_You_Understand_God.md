@@ -1,8 +1,8 @@
----
-title: "If You Understand God, It’s Your Creation, Not God"
-author: " "
-date: 2025-09-30
----
+
+###Title: "If You Understand God, It’s Your Creation, Not God"
+###Author: "Shreyash Dwivedi"
+###Date: 2025-09-30
+
 
 # If You Understand God, It’s Your Creation, Not God  
 
