@@ -1,7 +1,5 @@
 
-###Title: "If You Understand God, It’s Your Creation, Not God"
-###Author: "Shreyash Dwivedi"
-###Date: 2025-09-30
+# Title: "If You Understand God, It’s Your Creation, Not God"
 
 
 # If You Understand God, It’s Your Creation, Not God  
@@ -116,3 +114,7 @@ In that acceptance lies humility, reverence, and perhaps the truest form of wors
 
 Because the moment we think we have captured God in our net of understanding, what we hold in our hands is not the divine mystery, but our own creation.  
 And God, if real, must always remain greater than that.  
+
+
+Author: "Shreyash Dwivedi"
+Date: 30-Sept-2025
