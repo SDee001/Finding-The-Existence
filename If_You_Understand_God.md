@@ -1,6 +1,8 @@
 
 # Title: "If You Understand God, It’s Your Creation, Not God"
 
+Date: 30-Sept-2025
+
 
 # If You Understand God, It’s Your Creation, Not God  
 
@@ -117,4 +119,3 @@ And God, if real, must always remain greater than that.
 
 
 Author: "Shreyash Dwivedi"
-Date: 30-Sept-2025
