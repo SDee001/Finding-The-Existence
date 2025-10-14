@@ -1,6 +1,6 @@
 # The Beauty You See in Me Is a Reflection of You
 
-#### ~ Inspired by Rubi
+#### ~ Blog inspired by "Jalāl ad-Dīn Muhammad Rūmī"
 ---
 ##### Date:- 14-October-2025
 
