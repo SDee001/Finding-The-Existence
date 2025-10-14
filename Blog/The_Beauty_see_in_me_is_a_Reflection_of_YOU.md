@@ -8,7 +8,7 @@
 
 ## Introduction: The Mirror of Divinity
 
-“The beauty you see in me is a reflection of you.” — Rubi
+“The beauty you see in me is a reflection of you.” — Rūmī
 
 In these few words lies one of humanity’s oldest intuitions — that the divine is not somewhere else, not an external entity watching from the heavens, but rather something mirrored within us.
 The idea that God created man in His image is not merely a statement about form or shape; it’s an expression of recognition.
