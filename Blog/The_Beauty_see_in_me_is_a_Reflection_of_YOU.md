@@ -8,6 +8,8 @@
 
 ## Introduction: The Mirror of Divinity
 
+![Jalāl al-Dīn Muḥammad Rūmī](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7_%D8%A7%D8%AB%D8%B1_%D8%AD%D8%B3%DB%8C%D9%86_%D8%A8%D9%87%D8%B2%D8%A7%D8%AF_%28cropped%29.jpg/250px-%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7_%D8%A7%D8%AB%D8%B1_%D8%AD%D8%B3%DB%8C%D9%86_%D8%A8%D9%87%D8%B2%D8%A7%D8%AF_%28cropped%29.jpg)
+
 “The beauty you see in me is a reflection of you.” — Rūmī
 
 In these few words lies one of humanity’s oldest intuitions — that the divine is not somewhere else, not an external entity watching from the heavens, but rather something mirrored within us.
