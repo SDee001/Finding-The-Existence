@@ -1,152 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Finding the Existence — Reflections</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-    background:#000;
-    color:#f5f5f5;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-    position: relative;
-  }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Finding the Existence — Reflections</title>
 
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: url("https://i.ibb.co/FLVqYb32/Gemini-Generated-Image-fs3btzfs3btzfs3b.png") center center/cover no-repeat;
-    z-index: -1;
-  }
-  @media(max-width:768px){
-    body::before {
-      background-position: 60% 50%;
-    }
-  }
-
-  
-  .starfield-canvas{
-    position:fixed;inset:0;z-index:1;pointer-events:none;mix-blend-mode:screen;opacity:0.9;
-  }
-
-  .container{max-width:1100px;margin:0 auto;padding:0 16px}
-
-  section{min-height:80vh;display:flex;align-items:center;justify-content:center;padding:40px 16px;position:relative;z-index:2;}
-  #hero {height:100svh;}
-
-  #loader{
-    position:fixed;inset:0;z-index:100;
-    background:url("https://i.ibb.co/FLVqYb32/Gemini-Generated-Image-fs3btzfs3btzfs3b.png") center center/cover no-repeat;
-    filter:brightness(0.4);
-    display:flex;align-items:center;justify-content:center;
-    transition:opacity 1.5s ease,visibility 1.5s ease;
-  }
-  #loader.hidden{opacity:0;visibility:hidden;pointer-events:none;}
-
-  .orbital-system{
-    position:relative;
-    display:flex;align-items:center;justify-content:center;
-    perspective:1000px;
-    width: clamp(140px, 25vw, 220px);
-    height: clamp(140px, 25vw, 220px);
-  }
-  .earth{
-    position:relative;
-    width:100%;
-    height:100%;
-    border-radius:50%;
-    background:linear-gradient(135deg,#0f172a,#1e293b);
-    box-shadow:0 0 40px rgba(100,116,139,0.4),inset -14px -14px 28px rgba(0,0,0,0.6),inset 8px 8px 18px rgba(255,255,255,0.04);
-    overflow:hidden;
-    animation:earthRotation 18s linear infinite;
-  }
-  .earth::before{
-    content:'';position:absolute;inset:0;
-    background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Blue_Marble%2C_AS17-148-22727.jpg/512px-The_Blue_Marble%2C_AS17-148-22727.jpg') center/cover no-repeat;
-    opacity:0.65;mix-blend-mode:overlay;
-  }
-  .moon-container{
-    position:absolute;inset:0;
-    display:flex;align-items:center;justify-content:center;
-    animation:orbitRotate 4s linear infinite;
-  }
-  .moon-wrapper{
-    position:absolute;
-    transform:translateX(clamp(110px, 18vw, 150px)) translateY(-6px);
-  }
-  .moon{
-    width:clamp(28px, 5vw, 34px);
-    height:clamp(28px, 5vw, 34px);
-    border-radius:50%;
-    background:linear-gradient(135deg,#e5b56b,#c76b2b);
-    box-shadow:0 0 18px rgba(255,180,90,0.25),inset -6px -6px 12px rgba(0,0,0,0.45);
-    animation:moonSpin 4s linear infinite;
-    transform-origin:center;
-  }
-  @keyframes earthRotation{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-  @keyframes orbitRotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-  @keyframes moonSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-
-  
-  .hero-inner{max-width:1000px;display:grid;grid-template-columns:1fr;gap:20px;z-index:3}
-  @media(min-width:1024px){.hero-inner{grid-template-columns:1fr 380px}}
-
-  .title{font-family:"Times New Roman",serif;font-size:clamp(2.3rem,5.5vw,4rem);font-weight:900;line-height:1.05;color:#fff}
-  .tagline{color:rgba(245,245,245,0.82);font-weight:300;margin-top:10px;max-width:52ch}
-
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;
-    padding:10px 14px;border-radius:10px;
-    background:#000;color:#f5f5f5;text-decoration:none;font-weight:600;
-    border:1px solid rgba(255,255,255,0.08);
-    transition:transform .3s,background .3s;
-    min-width:110px;text-align:center;
-  }
-  .btn:hover, .btn:focus-visible{
-    background:#0a0a0a;transform:translateY(-2px);
-    outline: 2px solid #38bdf8;
-    outline-offset: 2px;
-  }
-  
-  
-  .blog-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:16px;width:100%}
-  @media(min-width:720px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(min-width:1100px){.blog-grid{grid-template-columns:repeat(3,1fr)}}
-
-  .card{
-    position:relative;background:rgba(30,30,45,0.6);
-    border-radius:12px;border:1px solid rgba(255,255,255,0.08);
-    box-shadow:inset 0 0 8px rgba(100,149,237,0.05),0 6px 14px rgba(0,0,0,0.5);
-    transition:transform .3s,box-shadow .3s,border-color .3s,background .3s;
-    backdrop-filter:blur(5px);display:flex;flex-direction:column;justify-content:space-between;height:auto;z-index:2
-  }
-  .card:hover{
-    transform:translateY(-6px) scale(1.02);
-    background:rgba(25,25,35,0.8);
-    border-color:rgba(255,255,255,0.1);
-  }
-  .card-body{padding:14px 14px;display:flex;flex-direction:column;gap:8px;height:100%}
-  .card-title{font-family:'Times New Roman',serif;font-weight:900;font-size:1.1rem}
-  .meta{color:rgba(245,245,245,0.68);font-size:.9rem}
-  .excerpt{color:rgba(245,245,245,0.9);line-height:1.5;font-size:.96rem;flex-grow:1}
-
-  
-  footer{
-    padding:24px 0;
-    border-top:1px solid rgba(255,255,255,0.05);
-    text-align:center;
-    color:rgba(245,245,245,0.6);
-    z-index:2;
-    position:relative;
-  }
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -180,7 +41,9 @@
   <section id="about">
     <div class="container text-center max-w-[700px]">
       <h2 class="title text-[1.8rem]">Why this space</h2>
-      <p class="mt-2.5 leading-relaxed text-neutral-200/80">This site collects short essays and reflections about belief, meaning, and the quiet architecture of thought.</p>
+      <p class="mt-2.5 leading-relaxed text-neutral-200/80">
+        This site collects short essays and reflections about belief, meaning, and the quiet architecture of thought.
+      </p>
     </div>
   </section>
 
@@ -193,8 +56,10 @@
         </div>
         <div id="post-count" class="text-neutral-200/60 text-sm"></div>
       </div>
+
       <div class="blog-grid">
-       <article class="card">
+
+        <article class="card">
           <div class="card-body">
             <div>
               <div class="card-title">Reflections on Humanity’s Need for Origins</div>
@@ -206,19 +71,21 @@
             </div>
           </div>
         </article>
-       <article class="card">
+
+        <article class="card">
           <div class="card-body">
             <div>
-              <div style="font-family:'Times New Roman',serif;font-weight:900;font-size:1.1rem">The beauty you see in me is a reflection of you</div>
+              <div class="card-title">The beauty you see in me is a reflection of you</div>
               <div class="meta mt-1">14-October-2025 • Author: Shreyash Dwivedi</div>
-              <p class="excerpt mt-2">“The beauty you see in me is a reflection of you.” — Rūmī 
-In these few words lies one of humanity’s oldest intuitions — that the divine is not somewhere else, not an external entity watching from the heavens, but rather something mirrored within us.</p>
+              <p class="excerpt mt-2">“The beauty you see in me is a reflection of you.” — Rubi 
+              In these few words lies one of humanity’s oldest intuitions — that the divine is not somewhere else, not an external entity watching from the heavens, but rather something mirrored within us.</p>
             </div>
             <div class="mt-3 flex justify-start">
               <a class="btn" href="https://github.com/SDee001/Finding-The-Existence/blob/main/Blog/The_Beauty_see_in_me_is_a_Reflection_of_YOU.md" target="_blank">Read →</a>
             </div>
           </div>
         </article>
+
         <article class="card">
           <div class="card-body">
             <div>
@@ -244,6 +111,7 @@ In these few words lies one of humanity’s oldest intuitions — that the divin
             </div>
           </div>
         </article>
+
       </div>
     </div>
   </section>
@@ -253,67 +121,6 @@ In these few words lies one of humanity’s oldest intuitions — that the divin
   </footer>
 </main>
 
-<script>
-  
-  const loader = document.getElementById('loader');
-  setTimeout(() => { loader.classList.add('hidden') }, 2000);
-
- 
-  (function(){
-    const canvas = document.getElementById('starfieldCanvas');
-    const ctx = canvas.getContext('2d');
-    const DPR = window.devicePixelRatio || 1;
-    let stars = [];
-    const starCount = 220;
-    
-    function resize(){
-      canvas.width = window.innerWidth * DPR;
-      canvas.height = window.innerHeight * DPR;
-      canvas.style.width = window.innerWidth + 'px';
-      canvas.style.height = window.innerHeight + 'px';
-      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    }
-
-    function makeStars(){
-      stars = Array.from({ length: starCount }).map(() => ({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        r: Math.random() * 1.4 + 0.2,
-        s: Math.random() * 0.25 + 0.05,
-        t: Math.random() * Math.PI * 2
-      }));
-    }
-
-    function draw(){
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for(const s of stars){
-        s.x -= s.s;
-        if (s.x < -10) s.x = window.innerWidth + 10;
-        s.t += 0.02;
-        const alpha = 0.6 + Math.sin(s.t) * 0.4;
-        ctx.beginPath();
-        ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
-        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        ctx.fill();
-      }
-      requestAnimationFrame(draw);
-    }
-
-    window.addEventListener('resize', () => { resize(); makeStars(); });
-    resize();
-    makeStars();
-    draw();
-  })();
-
-  
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  
-  const postCount = document.querySelectorAll('.blog-grid .card').length;
-  const postCountEl = document.getElementById('post-count');
-  if (postCountEl) {
-    postCountEl.textContent = `${postCount} post${postCount === 1 ? '' : 's'}`;
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
