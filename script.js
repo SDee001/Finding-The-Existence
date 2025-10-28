@@ -1,3 +1,13 @@
+const imagesToCache = [
+  'assets/Pale Blue Dot.webp',
+  'assets/The_Blue_Marble.webp'
+];
+imagesToCache.forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
+
+
 const loader = document.getElementById('loader');
 setTimeout(() => { loader.classList.add('hidden'); }, 2000);
 
@@ -54,4 +64,3 @@ const postCountEl = document.getElementById('post-count');
 if (postCountEl) {
   postCountEl.textContent = `${postCount} post${postCount === 1 ? '' : 's'}`;
 }
-
