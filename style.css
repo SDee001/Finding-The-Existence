@@ -38,7 +38,7 @@ section {
   background: url("assets/Pale Blue Dot.webp") center center/cover no-repeat;
   filter: brightness(0.4);
   display: flex; align-items: center; justify-content: center;
-  transition: opacity 1.5s ease, visibility 1.5s ease;
+  transition: opacity 1.0s ease, visibility 1.5s ease;
 }
 #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
@@ -146,4 +146,3 @@ footer {
   color: rgba(245,245,245,0.6);
   z-index: 2; position: relative;
 }
-
