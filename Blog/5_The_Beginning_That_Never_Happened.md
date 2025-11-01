@@ -1,6 +1,6 @@
 # “The Beginning That Never Happened”
 ---
-##### Date:- 1-Nov-2025
+##### Date:- 1-November-2025
 ---
 
 ## Introduction: Why We Obsess Over Beginnings
