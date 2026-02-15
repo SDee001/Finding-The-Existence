@@ -1,4 +1,4 @@
-# Religion, Comfort, and Reality
+# Religion is the opium of the people
 ---
 ##### Date:- 15-Feb-2026 
 ---
